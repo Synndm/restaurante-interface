@@ -2,152 +2,607 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurante Serliana</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+
+    </style>
 </head>
 
 <body>
 
-    <!-- HEADER e NAVBAR -->
-    <header>
+    <!-- NAVBAR -->
+    <header id="header">
         <nav class="navbar">
-            <div class="logo">Restaurante Serliana</div>
+            <div class="logo">
+                Ristorante<span><img class="logo" src="./src/assets/Logo Final.png" alt="Logo"></span></div>
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#menu">Cardápio</a></li>
-                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#depoimentos">Depoimentos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
+            <div class="nav-reserva">
+                <a href="#reservas" class="btn" style="font-size:.68rem;padding:.6rem 1.4rem;">Reservar Mesa</a>
+            </div>
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-line"></div>
+        <div class="hero-line"></div>
         <div class="hero-content">
-            <h1>Bem-vindo</h1>
-            <p>Detlhas</p>
-            <a href="#reservas" class="btn">Opção Reservar Mesa</a>
+            <p class="hero-eyebrow">Gastronomia Contemporânea · Desde 2008</p>
+            <h1>Uma experiência<em>inesquecível</em></h1>
+            <p class="hero-desc">
+                Cozinha autoral com ingredientes locais selecionados, em um ambiente que equilibra sofisticação e
+                acolhimento.
+            </p>
+            <div class="hero-ctas">
+                <a href="#reservas" class="btn btn-solid">Reservar Mesa</a>
+                <a href="#menu" class="btn">Ver Cardápio</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="hero-scroll-line"></div>
+            Explorar
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">18</div>
+                <div class="stat-label">Anos de história</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4.9</div>
+                <div class="stat-label">Avaliação média</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">42+</div>
+                <div class="stat-label">Pratos no cardápio</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">12k</div>
+                <div class="stat-label">Clientes atendidos</div>
+            </div>
         </div>
     </section>
 
     <!-- SOBRE -->
     <section id="sobre" class="sobre">
         <div class="container">
-            <h2>Sobre Nós</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, impedit a nesciunt obcaecati animi quidem voluptates similique ut odit sit fugit recusandae dolores voluptatum? Sed laborum voluptatem unde in eveniet.
-            </p>
-        </div>
-    </section>
-
-    <!-- DIFERENCIAIS -->
-    <section class="diferenciais">
-        <div class="container">
-            <h2>Diferenciais</h2>
-            <div class="cards">
-                <div class="card">Ingredientes Frescos</div>
-                <div class="card">Chef Especializado</div>
-                <div class="card">Ambiente Aconchegante</div>
+            <div class="sobre-grid">
+                <div class="sobre-img-wrap">
+                    <div class="sobre-img" data-aos="fade-right" data-aos-duration="1500">
+                        <span class="sobre-img-placeholder"><img
+                                src="./src/assets/pexels-patricia-barrios-jaime-158523792-12184757.jpg" alt=""></span>
+                    </div>
+                    <div class="sobre-badge" data-aos="fade-right" data-aos-duration="1000">
+                        <strong>18</strong>
+                        <span>anos de<br>tradição</span>
+                    </div>
+                </div>
+                <div class="sobre-text" data-aos="fade-left" data-aos-duration="1500">
+                    <p class="section-label">Nossa história</p>
+                    <h2 class="section-title">Paixão pela gastronomia desde o primeiro prato</h2>
+                    <div class="divider"></div>
+                    <p>O Serliana nasceu do sonho de transformar ingredientes simples em memórias afetivas. Cada prato
+                        carrega a assinatura do nosso chef e a dedicação de uma equipe apaixonada pela arte de cozinhar.
+                    </p>
+                    <p>Utilizamos produtos frescos de produtores locais, valorizando a sazonalidade e a identidade
+                        regional em cada criação do nosso cardápio.</p>
+                    <div class="sobre-destaques">
+                        <div class="sobre-destaque-item">Ingredientes selecionados de fornecedores locais</div>
+                        <div class="sobre-destaque-item">Receitas autorais criadas pelo Chef Luciano Serra</div>
+                        <div class="sobre-destaque-item">Ambiente pensado para cada ocasião especial</div>
+                        <div class="sobre-destaque-item">Carta de vinhos curada por sommelier certificada</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CARDÁPIO -->
+    <!-- SEÇÃO DE DIFERENCIAIS -->
+    <section class="diferenciais">
+        <div class="container" data-aos="fade-up"
+        data-aos-duration="2000">
+            <p class="section-label">Por que nos escolher</p>
+            <h2 class="section-title">O que nos torna únicos</h2>
+            <div class="dif-grid">
+                <div class="dif-card">
+                    <span class="dif-icon">🌿</span>
+                    <h3>Ingredientes Frescos</h3>
+                    <p>Trabalhamos com produtores locais para garantir a melhor qualidade e frescor em cada prato,
+                        respeitando a sazonalidade.</p>
+                </div>
+                <div class="dif-card">
+                    <span class="dif-icon">👨‍🍳</span>
+                    <h3>Chef Especializado</h3>
+                    <p>Nosso chef com formação internacional traz técnicas refinadas para criar combinações
+                        surpreendentes e inesquecíveis.</p>
+                </div>
+                <div class="dif-card">
+                    <span class="dif-icon">🕯️</span>
+                    <h3>Ambiente Único</h3>
+                    <p>Cada detalhe do espaço foi projetado para criar a atmosfera perfeita, seja para um jantar
+                        romântico ou celebração especial.</p>
+                </div>
+                <div class="dif-card">
+                    <span class="dif-icon">🍷</span>
+                    <h3>Carta de Vinhos</h3>
+                    <p>Seleção exclusiva de vinhos nacionais e importados, harmonizados pela nossa sommelier para
+                        realçar cada prato.</p>
+                </div>
+                <div class="dif-card">
+                    <span class="dif-icon">⭐</span>
+                    <h3>Serviço de Excelência</h3>
+                    <p>Nossa equipe é treinada para oferecer um atendimento personalizado, atento a cada detalhe da sua
+                        experiência.</p>
+                </div>
+                <div class="dif-card">
+                    <span class="dif-icon">🎂</span>
+                    <h3>Eventos Especiais</h3>
+                    <p>Espaço exclusivo para eventos privados, jantares corporativos e celebrações, com menu
+                        personalizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE CARDÁPIO -->
     <section id="menu" class="menu">
         <div class="container">
-            <h2>Cardápio</h2>
-
-            <div class="menu-categoria">
-                <h3>Entradas</h3>
-                <ul>
-                    <li>Entrada 1</li>
-                    <li>Entrada 2</li>
-                </ul>
+            <p class="section-label">O que servimos</p>
+            <h2 class="section-title">Nosso Cardápio</h2>
+            <div class="menu-tabs">
+                <div class="menu-tab active" onclick="showTab('entradas', this)">Entradas</div>
+                <div class="menu-tab" onclick="showTab('principais', this)">Pratos Principais</div>
+                <div class="menu-tab" onclick="showTab('sobremesas', this)">Sobremesas</div>
+                <div class="menu-tab" onclick="showTab('bebidas', this)">Bebidas</div>
             </div>
-
-            <div class="menu-categoria">
-                <h3>Pratos Principais</h3>
-                <ul>
-                    <li>Prato 1</li>
-                    <li>Prato 2</li>
-                </ul>
+            <div id="tab-entradas" class="menu-panel active">
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Carpaccio de Carne</h4>
+                            <p>Carne bovina fatiada finamente, alcaparras, parmesão e azeite trufado</p>
+                        </div>
+                        <div class="menu-item-price">R$ 48</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Bruschetta Caprese</h4>
+                            <p>Pão artesanal, tomate cereja, burrata fresca e manjericão</p>
+                        </div>
+                        <div class="menu-item-price">R$ 36</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Ceviche de Peixe</h4>
+                            <p>Peixe branco marinado no limão, coentro, pimenta dedo-de-moça e leite de tigre</p>
+                        </div>
+                        <div class="menu-item-price">R$ 52</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Sopa do Chef</h4>
+                            <p>Varia diariamente conforme ingredientes frescos disponíveis</p>
+                        </div>
+                        <div class="menu-item-price">R$ 32</div>
+                    </div>
+                </div>
             </div>
-
-            <div class="menu-categoria">
-                <h3>Sobremesas</h3>
-                <ul>
-                    <li>Sobremesa 1</li>
-                    <li>Sobremesa 2</li>
-                </ul>
+            <div id="tab-principais" class="menu-panel">
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Filé ao Molho de Vinho</h4>
+                            <p>Filé mignon grelhado, molho de vinho tinto, risoto de cogumelos e legumes salteados</p>
+                        </div>
+                        <div class="menu-item-price">R$ 128</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Salmão Grelhado</h4>
+                            <p>Salmão do Atlântico, crosta de ervas, purê de mandioquinha e molho de maracujá</p>
+                        </div>
+                        <div class="menu-item-price">R$ 112</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Risoto de Camarão</h4>
+                            <p>Arroz arbóreo cremoso, camarão rosa, bisque e toque de limão siciliano</p>
+                        </div>
+                        <div class="menu-item-price">R$ 98</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Pato à Laranja</h4>
+                            <p>Magret de pato confitado, redução de laranja e balsâmico, batatas douradas</p>
+                        </div>
+                        <div class="menu-item-price">R$ 138</div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-sobremesas" class="menu-panel">
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Petit Gâteau</h4>
+                            <p>Bolinho de chocolate belga com centro fluido, sorvete de baunilha e calda quente</p>
+                        </div>
+                        <div class="menu-item-price">R$ 42</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Crème Brûlée</h4>
+                            <p>Creme de baunilha com casquinha de açúcar caramelizado na hora</p>
+                        </div>
+                        <div class="menu-item-price">R$ 34</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Torta de Limão</h4>
+                            <p>Base de biscoito, creme de limão tahiti e merengue maçaricado</p>
+                        </div>
+                        <div class="menu-item-price">R$ 36</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Sorvete Artesanal</h4>
+                            <p>Três bolas à escolha: chocolate, baunilha ou frutas da estação</p>
+                        </div>
+                        <div class="menu-item-price">R$ 28</div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-bebidas" class="menu-panel">
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Carta de Vinhos</h4>
+                            <p>Seleção de rótulos nacionais e importados — consulte nossa sommelier</p>
+                        </div>
+                        <div class="menu-item-price">A partir de R$ 89</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Drinks Autorais</h4>
+                            <p>Coquetéis criados pelo nosso bartender com frutas frescas e destilados premium</p>
+                        </div>
+                        <div class="menu-item-price">R$ 38</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Sucos Naturais</h4>
+                            <p>Frutas frescas da estação, servidos com ou sem açúcar</p>
+                        </div>
+                        <div class="menu-item-price">R$ 18</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Água Mineral</h4>
+                            <p>Com ou sem gás, 500 ml ou 1 litro</p>
+                        </div>
+                        <div class="menu-item-price">R$ 10</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- GALERIA -->
-    <section class="galeria">
+    <!-- SEÇÇÃO CTA BANNER -->
+    <section class="cta-banner">
+        <div class="container" style="position:relative;">
+            <p class="section-label" style="text-align:center;">Ocasiões especiais</p>
+            <h2 class="section-title" style="text-align:center;">Comemore conosco</h2>
+            <div class="divider" style="margin:1.5rem auto 1.5rem;"></div>
+            <p>Aniversários, jantares românticos, eventos corporativos. Criamos experiências personalizadas para cada
+                momento.</p>
+            <a href="#reservas" class="btn btn-solid">Falar com a Equipe</a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE GALERIA -->
+    <section id="galeria" class="galeria">
         <div class="container">
-            <h2>Galeria</h2>
-            <div class="grid">
-                <img src="img1.jpg" alt="">
-                <img src="img2.jpg" alt="">
-                <img src="img3.jpg" alt="">
+            <p class="section-label">Espaço &amp; Pratos</p>
+            <h2 class="section-title">Galeria</h2>
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <div class="galeria-placeholder">Foto principal do ambiente</div>
+                </div>
+                <div class="galeria-item">
+                    <div class="galeria-placeholder">Prato especial</div>
+                </div>
+                <div class="galeria-item">
+                    <div class="galeria-placeholder">Detalhe do salão</div>
+                </div>
+                <div class="galeria-item">
+                    <div class="galeria-placeholder">Sobremesa</div>
+                </div>
+                <div class="galeria-item">
+                    <div class="galeria-placeholder">Bar</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- RESERVAS -->
+    <!-- SEÇÃO DE RESERVAS -->
     <section id="reservas" class="reservas">
         <div class="container">
-            <h2>Reservar Mesa</h2>
-            <form>
-                <input type="text" placeholder="Nome" required>
-                <input type="email" placeholder="Email" required>
-                <input type="date" required>
-                <input type="time" required>
-                <button type="submit">Reservar</button>
-            </form>
+            <div class="reservas-grid">
+                <div class="reservas-info">
+                    <p class="section-label">Faça sua reserva</p>
+                    <h2 class="section-title">Reserve sua mesa</h2>
+                    <div class="divider"></div>
+                    <p>Garanta seu lugar em uma experiência gastronômica única. Recomendamos reservar com antecedência,
+                        especialmente para fins de semana.</p>
+                    <div class="reservas-detalhe">
+                        <div class="reservas-detalhe-item">
+                            <div class="reservas-detalhe-icon">📍</div>
+                            <div class="reservas-detalhe-text">
+                                <strong>Endereço</strong>
+                                <span>Rua Exemplo, 123 — Centro</span>
+                            </div>
+                        </div>
+                        <div class="reservas-detalhe-item">
+                            <div class="reservas-detalhe-icon">📞</div>
+                            <div class="reservas-detalhe-text">
+                                <strong>Telefone</strong>
+                                <span>(91) 9 0000-0000</span>
+                            </div>
+                        </div>
+                        <div class="reservas-detalhe-item">
+                            <div class="reservas-detalhe-icon">⏰</div>
+                            <div class="reservas-detalhe-text">
+                                <strong>Horário de funcionamento</strong>
+                                <span>Ter–Dom: 12h–15h e 19h–23h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reservas-form">
+                    <form onsubmit="handleReserva(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nome completo</label>
+                                <input type="text" placeholder="Seu nome" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Telefone</label>
+                                <input type="tel" placeholder="(00) 00000-0000" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <input type="email" placeholder="seu@email.com" required />
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Data</label>
+                                <input type="date" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Horário</label>
+                                <select required>
+                                    <option value="">Selecione</option>
+                                    <option>12:00</option>
+                                    <option>12:30</option>
+                                    <option>13:00</option>
+                                    <option>19:00</option>
+                                    <option>19:30</option>
+                                    <option>20:00</option>
+                                    <option>20:30</option>
+                                    <option>21:00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Número de pessoas</label>
+                            <select required>
+                                <option value="">Selecione</option>
+                                <option>1 pessoa</option>
+                                <option>2 pessoas</option>
+                                <option>3 pessoas</option>
+                                <option>4 pessoas</option>
+                                <option>5–8 pessoas</option>
+                                <option>9+ pessoas (evento)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Observações</label>
+                            <textarea placeholder="Alergias, ocasião especial, preferências..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-solid form-submit">Confirmar Reserva</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- DEPOIMENTOS -->
+    <!-- SEÇÃO DE DEPOIMENTOS -->
     <section id="depoimentos" class="depoimentos">
         <div class="container">
-            <h2>Feedback de clientes</h2>
-            <div class="depoimento">
-                <p>"Comida maravilhosa e atendimento excelente!"</p>
-                <span>- Cliente 1</span>
-            </div>
-            <div class="depoimento">
-                <p>"Melhor restaurante da cidade!"</p>
-                <span>- Cliente 2</span>
+            <p class="section-label">O que dizem nossos clientes</p>
+            <h2 class="section-title">Avaliações</h2>
+            <div class="dep-grid">
+                <div class="dep-card">
+                    <div class="dep-stars">★★★★★</div>
+                    <p class="dep-text">"Cada prato é uma obra de arte. Jamais me esquecerei do filé ao molho de vinho
+                        que pedi no meu aniversário."</p>
+                    <div class="dep-author">
+                        <div class="dep-avatar">A</div>
+                        <div class="dep-author-info">
+                            <strong>Ana Carvalho</strong>
+                            <span>Google Reviews · Maio 2025</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dep-card">
+                    <div class="dep-stars">★★★★★</div>
+                    <p class="dep-text">"Melhor restaurante da cidade, sem dúvidas. O ambiente, o atendimento e a comida
+                        são impecáveis. Voltarei sempre!"</p>
+                    <div class="dep-author">
+                        <div class="dep-avatar">M</div>
+                        <div class="dep-author-info">
+                            <strong>Marcos Oliveira</strong>
+                            <span>TripAdvisor · Março 2025</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dep-card">
+                    <div class="dep-stars">★★★★★</div>
+                    <p class="dep-text">"O sommelier nos guiou perfeitamente na escolha dos vinhos. A harmonização foi
+                        perfeita. Experiência única!"</p>
+                    <div class="dep-author">
+                        <div class="dep-avatar">J</div>
+                        <div class="dep-author-info">
+                            <strong>Juliana Ferreira</strong>
+                            <span>Instagram · Janeiro 2025</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTATO -->
+    <!-- SEÇÃO DE CONTATO -->
     <section id="contato" class="contato">
         <div class="container">
-            <h2>Contato</h2>
-            <p>Endereço: Rua Exemplo, 123</p>
-            <p>Telefone: (00) 0000-0000</p>
-            <p>Email: contato@restaurante.com</p>
+            <div class="contato-grid">
+                <div>
+                    <p class="section-label">Fale conosco</p>
+                    <h2 class="section-title">Contato</h2>
+                    <div class="divider"></div>
+                    <div class="contato-items">
+                        <div class="contato-item">
+                            <strong>Endereço</strong>
+                            <span>Rua Exemplo, 123 — Centro, Belém/PA</span>
+                        </div>
+                        <div class="contato-item">
+                            <strong>Telefone &amp; WhatsApp</strong>
+                            <span>(91) 9 0000-0000</span>
+                        </div>
+                        <div class="contato-item">
+                            <strong>E-mail</strong>
+                            <span>contato@serliana.com.br</span>
+                        </div>
+                        <div class="contato-item">
+                            <strong>Redes sociais</strong>
+                            <span>@restaurante.serliana</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="section-label">Horários de funcionamento</p>
+                    <h2 class="section-title" style="font-size:1.8rem;">Quando estamos abertos</h2>
+                    <div class="divider"></div>
+                    <div class="horarios-grid">
+                        <div class="horario-item">
+                            <strong>Terça a Quinta</strong>
+                            <span>12h–15h · 19h–22h30</span>
+                        </div>
+                        <div class="horario-item">
+                            <strong>Sexta e Sábado</strong>
+                            <span>12h–16h · 19h–23h30</span>
+                        </div>
+                        <div class="horario-item">
+                            <strong>Domingo</strong>
+                            <span>12h–16h</span>
+                        </div>
+                        <div class="horario-item">
+                            <strong>Segunda-feira</strong>
+                            <span>Fechado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- MAPA -->
+    <!-- SEÇÃO DE MAPA -->
     <section class="mapa">
-        <iframe src="https://www.google.com/maps/embed?" allowfullscreen></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127354.49!2d-48.50444!3d-1.45583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48b9fe3bd36df%3A0xea3a07acfe3a4e7!2sBel%C3%A9m%2C%20PA!5e0!3m2!1spt-BR!2sbr!4v1680000000000!5m2!1spt-BR!2sbr"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Serliana - Todos os direitos reservados</p>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo"><img src="./src/assets/Logo Final.png" alt="Serliana"></div>
+                    <p>Gastronomia contemporânea com alma regional. Uma experiência para todos os sentidos, em Belém do
+                        Pará.</p>
+                    <div class="footer-socials">
+                        <a class="footer-social" href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                          </svg></a>
+                        <a class="footer-social" href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                          </svg></a>
+                        <a class="footer-social" href="#" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                          </svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#menu">Cardápio</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#reservas">Reservas</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Informações</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Eventos Privados</a></li>
+                        <li><a href="#">Carta de Vinhos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Restaurante Serliana — Todos os direitos reservados</span>
+                <span>Desenvolvido com ♥ em Belém, PA</span>
+            </div>
+        </div>
     </footer>
 
+    <!-- SCROLL TOP -->
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        aria-label="Voltar ao topo">↑</button>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="src/scripts.js"></script>
 </body>
 
 </html>

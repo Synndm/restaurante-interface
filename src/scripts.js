@@ -1,0 +1,31 @@
+// Navbar scroll
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+});
+
+// Menu tabs
+function showTab(id, el) {
+    document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    el.classList.add('active');
+}
+
+// Reserva feedback
+function handleReserva(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type=submit]');
+    btn.textContent = '✓ Reserva enviada!';
+    btn.style.background = '#4caf50';
+    btn.style.borderColor = '#4caf50';
+    btn.disabled = true;
+    setTimeout(() => {
+        btn.textContent = 'Confirmar Reserva';
+        btn.style.background = '';
+        btn.style.borderColor = '';
+        btn.disabled = false;
+        e.target.reset();
+    }, 4000);
+}
