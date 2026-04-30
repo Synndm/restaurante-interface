@@ -297,7 +297,7 @@ header.scrolled {
 }
 
 .hero-scroll {
-    position: absolute;
+    position: center;
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
@@ -357,7 +357,7 @@ header.scrolled {
     background: var(--surface);
     padding: 2.5rem 2rem;
     text-align: center;
-    
+
 }
 
 .stat-number {
@@ -617,11 +617,9 @@ header.scrolled {
     position: relative;
     overflow: hidden;
     background-image:
-        linear-gradient(
-            180deg,
+        linear-gradient(180deg,
             rgba(0, 0, 0, 0.5),
-            rgba(160, 123, 69, 0.95)
-        ),
+            rgba(160, 123, 69, 0.95)),
         url('/src/assets/pexels-patricia-barrios-jaime-158523792-12184757.jpg');
 
     background-repeat: no-repeat;
@@ -1070,6 +1068,8 @@ footer {
 }
 
 /* ─── RESPONSIVE ─── */
+
+/* TABLET */
 @media (max-width: 900px) {
 
     .sobre-grid,
@@ -1109,9 +1109,19 @@ footer {
     .nav-reserva {
         display: none;
     }
+
+    /* 🔧 AJUSTES IMPORTANTES */
+    .container,
+    .navbar {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
 
-@media (max-width: 600px) {
+
+/* MOBILE */
+@media (max-width: 768px) {
+
     .form-row {
         grid-template-columns: 1fr;
     }
@@ -1126,5 +1136,45 @@ footer {
 
     .horarios-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* OVERFLOW */
+    .container,
+    .navbar {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .hero {
+        padding: 6rem 1rem 4rem;
+    }
+
+    .sobre-badge {
+        right: 0;
+        bottom: 0;
+    }
+
+    /*  SEGURANÇA DE LAYOUT */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+    }
+
+    .hero-ctas {
+        flex-wrap: wrap;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4 {
+        word-break: break-word;
     }
 }
