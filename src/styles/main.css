@@ -747,11 +747,11 @@ header.scrolled {
 
 .reservas-detalhe-text span {
     font-size: .85rem;
-    color: var(--muted);
+    color: var(--surface);
 }
 
 .reservas-form {
-    background: var(--surface);
+    background: var(--bg);
     border: 1px solid var(--border);
     padding: 3rem;
 }
@@ -779,7 +779,7 @@ header.scrolled {
 .form-group select,
 .form-group textarea {
     width: 100%;
-    background: var(--bg);
+    background: #fff;
     border: 1px solid var(--border);
     color: var(--cream);
     padding: .85rem 1rem;
