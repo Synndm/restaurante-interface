@@ -1,12 +1,12 @@
 /* ─── PALETA DE CORES ─── */
 :root {
-    --bg: #c8b297;
+    --bg: #d39e5d;
     --bg2: #c8b297;
     --surface: #4e0a0a;
     --gold: #655942;
     --gold-light: #b1a74c;
-    --cream: #3f110b;
-    --muted: #ffdbf0;
+    --cream: #000000;
+    --muted: #575437;
     --border: rgba(201, 168, 76, .18);
     --font-display: 'Cormorant Garamond', serif;
     --font-body: 'Jost', sans-serif;
@@ -96,7 +96,7 @@ ul {
 }
 
 .btn:hover {
-    background: var(--gold);
+    background: var(--surface);
     color: var(--bg);
 }
 
@@ -106,7 +106,7 @@ ul {
 }
 
 .btn-solid:hover {
-    background: var(--cream);
+    background: var(--surface);
 }
 
 /* ─── NAVBAR ─── */
@@ -125,7 +125,7 @@ header {
 
 header.scrolled {
     padding: .9rem 0;
-    background: rgba(241, 231, 216, 0.97);
+    background: rgba(197, 175, 141, 0.97);
 }
 
 .navbar {
@@ -503,6 +503,9 @@ header.scrolled {
 
 .dif-card:hover {
     background: var(--surface);
+}
+.dif-card:hover h3 {
+    color: #fff;
 }
 
 .dif-card:hover::before {
